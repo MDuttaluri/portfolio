@@ -3,9 +3,21 @@ import Card from "./Player";
 import {Row,Col, Container} from "react-bootstrap";
 import 'semantic-ui-css/semantic.min.css'
 import Auxillary from "./Auxillary";
+import { useEffect, useState } from "react";
 
-function HomePage(){
-    return <div  class="StreamPageMainDiv">
+function HomePage(props){
+
+    const [stage,setStage] = useState(<></>);
+
+    useEffect(()=>{
+        setStage(<Card nextCard={setStage}/>);
+    },[]);
+
+
+
+
+    return <div id={props.id} class="StreamPageMainDiv" >
+
         <motion.div  
         
         animate={{ x:[-500,0] ,transition:{duration:0.5}}}
@@ -23,11 +35,13 @@ function HomePage(){
                 <motion.div
                     animate={{scale:[0,1],transition:{duration:2}}}
                 >
-                    <Card/>
+                    {stage}
                 </motion.div>
         </center>
     </div>;
 }
+
+
 
 
 export default HomePage;

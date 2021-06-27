@@ -10,9 +10,10 @@ import html from "../../asset/html.png";
 import js from "../../asset/js.png";
 import css from "../../asset/css.png";
 import front_end from "../../asset/front_end.png";
+import Middleware from "../Middleware";
 
 
-function Card(){
+function Card(props){
 
 
     return <div class="MonitorOuterDiv">
@@ -31,22 +32,32 @@ function Card(){
                 </motion.div>
                 </Col>
                 <Col>
-                <DeviceCard color="#16d0e0" image={css} header="CSS"/>
+                <motion.div
+                   
+                    whileHover={{scale:1.1}}
+                    children={<DeviceCard color="#16d0e0" image={css} header="CSS"/>}>
+                </motion.div>
                 </Col>
             </Row>
             <Row noGutters md="2" sm="1" xs="1" xl="2" lg="2">
             <Col>
-                <DeviceCard color="#e016a3" image={js} header="JavaScript"/>
+            <motion.div
+                   
+                    whileHover={{scale:1.1}}
+                    children={<DeviceCard color="#e016a3" image={js} header="JavaScript"/>}>
+                </motion.div>
+               
                 </Col>
                 <Col>
-                <DeviceCard color="#ffffff" fontColor="black" image={reactLogo} header="React.js"/>
+                <motion.div
+                   
+                   whileHover={{scale:1.1}}
+                   children={<DeviceCard color="#ffffff" image={reactLogo} fontColor="black" header="React.js"/>}>
+               </motion.div>
+                
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                <Button style={{backgroundColor:"black",outlineColor:"black"}}>Next</Button>
-                </Col>
-            </Row>
+           
             </Container>
         </div>
         <div class="DeviceHomeButton">
@@ -58,3 +69,10 @@ function Card(){
 
 
 export default Card;
+
+/*
+ <Row>
+<Col>
+<Button style={{backgroundColor:"black",outlineColor:"black"}} onClick={()=>props.nextCard(<Middleware/>)}>Next</Button>
+</Col>
+</Row>*/
