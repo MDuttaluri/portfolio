@@ -2,11 +2,17 @@ html{
   scroll-behavior: smooth;
   
 }
-h1:hover{
-  color:rgba(16, 12, 66, 1);
-}
+
 #logo:hover{
   color: white;
+}
+
+.hoverText{
+  font-size: medium;
+  transition: font-size 0.5s;
+}
+.hoverText:hover{
+  font-size: large;
 }
 
 ::-webkit-scrollbar {
@@ -32,16 +38,95 @@ h1:hover{
   font-family: system-ui;
 }
 .ProjectsDiv{
+  display: grid;
+  gap:10px;
+  grid-template-rows: 20% 70%;
   padding: 1%;
   min-height: 100vh;
 }
+.carousel{
+  
+  height: 100%;
+}
 .ProjectCarouselDiv{
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(70vh - 40px);
   background-color: #F67280;
   color:white;
-  padding: 7%;
+  
 }
 
+.mailDiv{
+  
+}
+input{
+  border: solid 1px #000;
+  border-radius: 2px;
+  content: "asd";
+  padding:5px;
+  font-size: 16px;
+  padding-left: 5px;
+  border-radius: 2px;
+  box-shadow: none;
+  height : 30px;
+ 
+  outline : 0px solid rgb(0, 0, 0);
+  transition: box-shadow 0.5s;
+  outline: none;
+  
+}
+
+input:focus{
+  box-shadow: 5px 8px 3px #000;
+}
+
+.grid--threeCol{
+  margin:15px;
+  display: grid;
+  grid-template-columns: 35% 5% 60%;
+  max-width: 60%;
+}
+.button{
+  border : none;
+  background-color: rgba(16, 12, 66, 1);
+  color: white;
+  font-size: medium;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 2px;
+  transition: background-color 0.5s,box-shadow 0.5s;
+}
+.button:hover{
+  background-color: white;
+  color:rgba(16, 12, 66, 1);
+  box-shadow: 5px 5px 2px 2px black;
+}
+.buttonDisabled{
+  background-color:gray;
+  color: #000;
+  transition: none;
+}
+.buttonDisabled:hover{
+  box-shadow: none;
+  background-color: gray;
+}
+
+.textarea{
+  border: solid 1px #000;
+  resize:none;
+  padding: 5px;
+  outline: none;
+  min-height:200px;
+  border-radius: 2px;
+  box-shadow: none;
+  transition: box-shadow 0.5s;
+
+}
+.textarea:focus{
+  box-shadow: 10px 8px 5px #000;
+}
 
 .StreamPageMainDiv{
   background-color: black;
@@ -212,6 +297,12 @@ h1:hover{
 }
 
 @media screen and (max-width: 450px) {
+  .grid--threeCol{
+    margin:15px;
+    display: grid;
+    grid-template-columns: 35% 5% 60%;
+    max-width: 100%;
+  }
   .GridClassTwo{
     display: inline;
     padding: 0;
@@ -395,6 +486,12 @@ h1:hover{
 }
 
 @media only screen and (min-width: 992px) {
+  .grid--threeCol{
+    margin:15px;
+    display: grid;
+    grid-template-columns: 35% 5% 60%;
+    max-width: 40%;
+  }
   .DeviceCard{
   border-radius: 5px;
  margin: 1vw;
@@ -425,4 +522,7 @@ h1:hover{
   }
 }
 
+.link{
+  color:#272727;
+}
 

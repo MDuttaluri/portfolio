@@ -15,11 +15,14 @@ function Header(){
             document.getElementById('Header').style.backgroundColor = "#F67280";
             document.getElementById('Header').style.color = "black";
             document.getElementById('logo').style.color = "white";
+            document.getElementById('logo').style.textShadow = "2px 2px 2px red";
             document.getElementById('smallNavBar').style.backgroundColor = "#F67280";
         }else{
             document.getElementById('Header').style.backgroundColor = "rgba(16, 12, 66, 1)";
             document.getElementById('Header').style.color = "white";
             document.getElementById('logo').style.color = "white";
+            document.getElementById('logo').style.textShadow = "2px 2px 2px blue";
+
             document.getElementById('smallNavBar').style.backgroundColor = "rgba(16, 12, 66, 1)";
         }
         styleToggle = !styleToggle;
@@ -29,7 +32,7 @@ function Header(){
 
     return <div id="Header" class="Header">
             <div class="HeaderLeftDiv">
-                <h1 id="logo" onClick={logoClicked} style={{fontSize:"2rem",display:"inline",fontFamily:"system-ui"}}>DMT</h1>
+                <h1 id="logo" onClick={logoClicked} style={{userSelect:"none",fontSize:"2rem",display:"inline",fontFamily:"system-ui",textShadow:logoClicked?"2px 2px 2px blue":"2px 2px 2px red"}}>DMT</h1>
             </div>
             <div class="HeaderRightSmallerDeviceDiv">
                 <button class="HeaderButton" onClick={()=>{

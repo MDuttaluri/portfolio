@@ -45,12 +45,12 @@ function ExperiencePage(props){
                         <div >
                                 <SkillBar name="Java" value="90"/>
                                 <SkillBar name="JavaScript" value="80"/>
-                                <SkillBar name="Node.js/Express" value="70"/>
+                                <SkillBar name="Node.js/Express" value="80"/>
                         </div>
                         <div >
-                                <SkillBar name="Python" value="80"/>
+                                <SkillBar name="Python" value="90"/>
                                 <SkillBar name="SQL" value="70"/>
-                                <SkillBar name="AEM/CQ" value="70"/>
+                                <SkillBar name="AEM/CQ" value="60"/>
                         </div>
                         <div >
                                 <SkillBar name="HTML/CSS" value="80"/>
