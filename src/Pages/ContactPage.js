@@ -2,6 +2,7 @@ import moment from 'moment';
 import { useEffect, useState } from 'react';
 import resume from '../asset/Resume-Manyu Duttauri.pdf';
 import firebase from 'firebase';
+import Book from '../components/Book/Book';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAwOSQKuHei4KGV9x0v3cv1yUGt00sevEM",
@@ -45,6 +46,7 @@ function ContactPage(props){
 
     return <div id={props.id} class="ContactDiv">
         <center>
+            <Book/>
             <h1 style={{fontSize:"2rem"}}>Contact</h1>
             <div style={{width:"50%"}} class="HorizontalLineBlack"></div>
             <div className="mailDiv">
@@ -66,13 +68,13 @@ function ContactPage(props){
                         <textarea onChange={(e)=>{setMessage(e.target.value)}}  className="textarea"/>
                     </div>
                     <button onClick={()=>{
-                       // localStorage.setItem("mailSent","yes");
-                       // localStorage.setItem("mailTimestamp",moment().format());
+                        localStorage.setItem("mailSent","yes");
+                        localStorage.setItem("mailTimestamp",moment().format());
                         let storageRef = storage.ref().child(name+"-"+moment().format()+".txt")
                         //let blob = new Blob(["Name: "+name+", Subject:"+subject+", Message:"+message],{type:"text/plain"})
                         try{
-                        storageRef.putString("Name: "+name+", Subject:"+subject+", Message:"+message).then(()=>{alert("sent")}).catch((err)=>{alert(err)})
-                        }catch(err){alert(err)}
+                        storageRef.putString("Name: "+name+", Subject:"+subject+", Message:"+message)
+                        }catch(err){}
 
                         setLockSubmit(true)}
                     } className={"button " + (lockSubmit?"buttonDisabled":"")} disabled={lockSubmit}>Send</button>
@@ -90,7 +92,7 @@ function ContactPage(props){
                 <p>LinkedIn Profile : <a className="hoverText" target="blank" href="https://www.linkedin.com/in/manyu-duttaluri">Manyu Duttaluri</a></p>
                 <p>Page developed using React.js </p>
            </div>
-            
+        
         </center>
     </div>
 }

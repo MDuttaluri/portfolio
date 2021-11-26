@@ -7,11 +7,27 @@ import js from '../asset/js.png';
 function ProjectsPage(props){
     return <div id={props.id} class="ProjectsDiv">
         <center>
-        <h1>Manyu Duttaluri</h1>
-        <p>Full Stack Developer</p>
+        
         <h1>Projects</h1><br/>
+        <p>Some of my recent projects are listed in the carousel below.</p>
         </center>
+         
         <Carousel interval="3000" className="carousel">
+        <Carousel.Item>
+                <div className="ProjectCarouselDiv" style={{color:"white",backgroundColor:"#341800"}}>
+                    <center>
+                        <h1>Sudoku Solver</h1>
+                        <h3>Live URL : <a style={{color:"white",textShadow:"2px 2px 2px brown"}} target="blank" href="https://solve-sudoku.web.app">Solve Sudoku</a></h3>
+                        <p>A simple interactive web application to solve a classic 9x9 sudoku puzzle using the backtracking approach.</p>
+                        <h4>Languages and techniques used :</h4>
+                        <div  style={{width:"50%"}}>
+                                    <p class="ProjectsP">HTML/CSS</p>
+                                    <p class="ProjectsP">React.js</p>  
+                                    <p class="ProjectsP">Backtracking</p>
+                        </div>
+                    </center>
+                </div>
+            </Carousel.Item>
             <Carousel.Item>
                 <div className="ProjectCarouselDiv">
                     <center>
@@ -19,11 +35,24 @@ function ProjectsPage(props){
                         <h3>Live URL : <a style={{color:"white",textShadow:"2px 2px 2px red"}} target="blank" href="https://htmleditor.web.app">Online Editor</a></h3>
                         <p>A Web application that enables users to write and check their HTML, CSS and JavaScript code in their browser. Additional features like 'Hot-render' and code downloading is also included.</p>
                         <h4>Languages and tools used :</h4>
-                        <div class="GridClassTwo" style={{width:"50%"}}>
+                        <div  style={{width:"50%"}}>
                                     <p class="ProjectsP">HTML/CSS</p>
-                                    <p class="ProjectsP">PHP</p>
-                                    <p class="ProjectsP">JavaScript</p>
-                                    <p class="ProjectsP">MySQL</p>
+                                    <p class="ProjectsP">React.js</p>  
+                                    <p class="ProjectsP">Ace Code Editor</p>
+                        </div>
+                    </center>
+                </div>
+            </Carousel.Item>
+            <Carousel.Item>
+                <div className="ProjectCarouselDiv" style={{color:"black",backgroundColor:"#c0c3c3"}}>
+                    <center>
+                        <h1>Typing Text - React Component Library</h1>
+                        <h3>NPM URL : <a style={{color:"white",textShadow:"2px 2px 2px rgba(16, 12, 66, 1)"}} target="blank" href="https://www.npmjs.com/package/typingtext">TypeTexting</a></h3>
+                        <p>A component library for React.js that enables 'typing' animation for the provided data with developer preferred customisation.</p>
+                        <h4>Languages used and target for:</h4>
+                        <div  style={{width:"50%"}}>
+                                    <p class="ProjectsP">HTML/CSS</p>
+                                    <p class="ProjectsP">React.js</p>  
                         </div>
                     </center>
                 </div>

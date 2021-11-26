@@ -5,16 +5,18 @@ import HomePage from "./forms/streamPage";
 import StoryCard from "./StoryCard";
 import TechStack from "./TechStack";
 import ProjectsPage from "./ProjectsPage";
-
+import IntroPage from './IntroPage';
 function LandingPage(props){
 
   
     const id = props.id
     return <div  id={id} class="LandingPageDiv">
+            <IntroPage id={"Intro"}/>
             <ProjectsPage id="Projects"/>
             <ExperiencePage id="Experience"/>
             <HomePage id="Tech Stack"/>
             <ContactPage id="Contact"/>
+
            
     </div>
 }

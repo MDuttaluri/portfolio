@@ -1,7 +1,18 @@
 import { useState, useRef } from "react";
 import { Overlay } from "react-bootstrap";
+import moment from "moment";
 
 function ExperiencePage(props){
+    function getExp(joiningDate){
+        // yyyy-mm-dd
+        let x = parseFloat(moment().diff(moment(joiningDate),'months'))
+        if(x < 12){
+            return <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>{x}+</h1></p>
+        }
+        else{
+            return <p>Experience in years : <h1 style={{marginLeft:"4px",display:"inline"}}>{moment().diff(moment(joiningDate),'years',true).toFixed(1)}+</h1></p>
+        }
+    }
     return <div id={props.id} class="ExpDiv">
         <center>
             <h1>Experience</h1>
@@ -14,7 +25,7 @@ function ExperiencePage(props){
                     <h1>Work</h1>
                     <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
                     <p>Assistant Systems Engineer,</p><p> Tata Consultancy Services</p>
-                    <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>4+</h1></p>
+                    {getExp("2021-01-27")}
                  
                 </center>
             </div>

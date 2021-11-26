@@ -5,6 +5,96 @@ html{
 
 #logo:hover{
   color: white;
+  cursor: pointer;
+}
+.book--closed{
+  background-color: rgba(16, 12, 66, 1);
+  height: 70vh;
+  width: 300px;
+  border-radius: 2px;
+  color:white;
+  text-align: center;
+  display: flex;
+  align-items:center;
+  text-align: center;
+  justify-content: center;
+  margin: 10px;
+}
+.book--title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  user-select: none;
+}
+.book--opened{
+  border : solid 2px black;
+  height : 70vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.page{
+  border : solid 1px black;
+}
+
+.IntroDiv{
+  background-color: rgba(16, 12, 66, 1);
+  color:#fff;
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  user-select: none;
+  align-items: flex-start;
+  text-align: center;
+  overflow: auto;
+}
+.introDiv__itemsDiv{
+  width: 100vw;
+  margin-top: 5vh;
+  display: grid;
+  place-items: center;
+}
+.introDiv__item{
+  width:max-content;
+  white-space: nowrap;
+  margin:15px;
+  height:40px;
+
+  text-align: center;
+  
+}
+
+.animText{
+  font-size: 50px;
+  margin: 0;
+  padding-right: 5px;
+  overflow: hidden;
+}
+.noAnim{
+  animation: none;
+}
+@keyframes animText {
+  from{
+    width: 0%;
+  }
+  to{
+    width:100%;
+  }
+}
+@keyframes animText--rev {
+  from{
+    width: 100%;
+  }
+  to{
+    width:0%;
+  }
+}
+@keyframes animText__cursor {
+  from{
+    border-right: transparent solid 5px;
+  }
+  to{
+    border-right: #fff solid 5px;
+  }
 }
 
 .hoverText{
@@ -270,6 +360,7 @@ input:focus{
   padding: 1%;
   display: grid;
   grid-template-columns: auto auto;
+  
 }
 .SkillBar{
   width:100%;
