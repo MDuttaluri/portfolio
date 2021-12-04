@@ -70,8 +70,8 @@ function Header(){
 
 function HeaderButtonsList(props){
 
-    const [buttonLabels,setButtonLabels] = useState(['Intro','Projects','Experience','Tech Stack','Contact']);
-    const [buttonLinks,setButtonLinks] = useState(['#Intro','#Projects','#Experience','#TechStack','#Contact']);
+    const [buttonLabels,setButtonLabels] = useState(['Intro','Projects','Experience','Contact']);
+    const [buttonLinks,setButtonLinks] = useState(['#Intro','#Projects','#Experience','#Contact']);
     const [includeBr,setIncludeBr] = useState(props.newLines);
     const parentFn = props.parentContext;
     var regions = {};

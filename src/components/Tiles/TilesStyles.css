@@ -1,0 +1,54 @@
+.tilesOuterDiv{
+    border: 1px solid #0000;
+    min-height :100vh;
+}
+
+.tilesRow{
+    display: grid;
+    row-gap:  20px;
+    justify-content: space-between;
+    justify-items: center;
+    padding : 2%;
+    
+    height: min-content;
+}
+
+
+.tileRowsGrid{
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    column-gap: 10px;
+    justify-content: space-between;
+    height: min-content;
+    
+    
+}
+
+.tile{
+    border-radius: 10px;
+    width: 350px;
+    min-height: 150px;
+    height : 150px;
+    padding: 10px;
+    box-shadow: 3px 2px 10px 2px rgb(153, 153, 153);
+    transition: box-shadow 0.3s, height 200ms;
+    cursor: default;
+    z-index: 100;
+}
+
+.tile:hover{
+    box-shadow: 6px 6px 6px 4px rgb(153,153,153);
+    height : 300px;
+}
+
+.toolsGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: solid 1px #0000;
+}
+
+@media screen and (max-width: 450px) {
+    .title{
+        width: 100%;
+    }
+}

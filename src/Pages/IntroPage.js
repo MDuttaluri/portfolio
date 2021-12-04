@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-
+import {FiArrowDown} from 'react-icons/fi';
 function IntroPage({id}) {
     const [counter, setCounter] = useState(0)
     const [items, setItems] = useState([])
     const [data, setData] = useState(["Hello!","I am,","Manyu Duttaluri","And I'm a,"])
     const [intervals, setIntervals] = useState([800,1000,1800,1300,2100])
-    const [titles, setTitles] = useState(["Student.","CS Grad.","Employee.","Full Stack Developer."])
+    const [titles, setTitles] = useState(["Student.","CS Undergrad.","Employee.","Full Stack Developer."])
+    const [navButtonOpacity, setNavButtonOpacity] = useState("0")
 
     function getPromise(interval){
         return new Promise(resolve => setTimeout(resolve,interval))
@@ -40,8 +41,14 @@ function IntroPage({id}) {
         
     }
 
-    useEffect(()=>{
-        loaded()
+    async function loadNavButton(){
+        await getPromise(1000)
+        setNavButtonOpacity("1");
+    }
+
+    useEffect(async()=>{
+        await loaded()
+        loadNavButton()
     },[])
 
     useEffect(()=>{
@@ -68,19 +75,22 @@ function IntroPage({id}) {
                 items.push(<div className="introDiv__item"><p style={{fontSize:"40px",animation:`animText ${1000}ms steps(40, end) forwards,animText__cursor 0.8s infinite`}} className={"animText"}>{titles[i+1]}</p></div>)
         }
 
-        
-
         return items
     }
 
+    function moveToProjects(){
+        let headerHeight = document.getElementById("Header").offsetHeight;
+        window.scroll({behavior:"smooth",top : document.getElementById("Projects").offsetTop - headerHeight})
+    }
 
     return (
     
         <div id={id} className="IntroDiv">
             <div className="introDiv__itemsDiv">
                 {items}
+                <div  onClick={()=>{moveToProjects()}} ><FiArrowDown className="IntroButtonNav" style={{opacity:navButtonOpacity}} size="40px" /></div>
                 </div>
-            
+               
         </div>
     )
 }

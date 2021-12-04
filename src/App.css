@@ -122,30 +122,37 @@ html{
   background: rgba(16, 12, 66, 1); 
 }
 
+
+.projectsHeaderMain{
+  text-align: center;
+  height: min-content;
+}
+
 .ContactDiv{
   padding:1%;
   min-height: 100vh;
   font-family: system-ui;
 }
 .ProjectsDiv{
-  display: grid;
-  gap:10px;
-  grid-template-rows: 20% 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1%;
   min-height: 100vh;
 }
 .carousel{
-  
+  color : #000;
   height: 100%;
 }
 .ProjectCarouselDiv{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(70vh - 40px);
+  width: 100vw;
   background-color: #F67280;
   color:white;
-  
+  padding : 20px;
+  gap : 20px;
 }
 
 .mailDiv{
@@ -166,6 +173,10 @@ input{
   transition: box-shadow 0.5s;
   outline: none;
   
+}
+
+.ProjectCarouselDiv > center > p{
+  width: 60%;
 }
 
 input:focus{
@@ -386,6 +397,52 @@ input:focus{
 .ProjectsP{
   font-size: large;
 }
+
+.IntroButtonNav{
+  opacity: 0;
+  content : "";
+  transition: opacity 1s,content 1s;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.IntroButtonNav:hover{
+    transform : scale(1.3)
+}
+
+
+
+
+.ArrowDownButton{
+  height : 40px;
+  width: 40px;
+  display: grid;
+
+  background-color: #fff;
+  transition: opacity 1s;
+  grid-template-columns: auto auto;
+  border-radius: 50%;
+  align-content: flex-end;
+  justify-content: center;
+  
+}
+.introArrow{
+  height: 50px;
+}
+.InnerArrow{
+  height : 80px;
+  width: 7px;
+ 
+  background-color: rgba(16, 12, 66, 1);
+  transform: rotate(-27deg) translateX(-15px) translateY(25px);
+}
+
+.InnerArrow:nth-child(2){
+  transform: rotate(27deg) translateX(15px) translateY(25px);
+  
+}
+
 
 @media screen and (max-width: 450px) {
   .grid--threeCol{

@@ -14,7 +14,7 @@ function LandingPage(props){
             <IntroPage id={"Intro"}/>
             <ProjectsPage id="Projects"/>
             <ExperiencePage id="Experience"/>
-            <HomePage id="Tech Stack"/>
+           
             <ContactPage id="Contact"/>
 
            

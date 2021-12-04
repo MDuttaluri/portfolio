@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import resume from '../asset/Resume-Manyu Duttauri.pdf';
 import firebase from 'firebase';
 import Book from '../components/Book/Book';
+import Tiles from '../components/Tiles/Tiles';
+import ProjectsTable from '../components/ProjectsTable/ProjectsTable';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAwOSQKuHei4KGV9x0v3cv1yUGt00sevEM",
@@ -46,7 +48,6 @@ function ContactPage(props){
 
     return <div id={props.id} class="ContactDiv">
         <center>
-            <Book/>
             <h1 style={{fontSize:"2rem"}}>Contact</h1>
             <div style={{width:"50%"}} class="HorizontalLineBlack"></div>
             <div className="mailDiv">

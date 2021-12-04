@@ -1,0 +1,85 @@
+.projectsTableDiv{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 80vh;
+    overflow: auto;
+    width: 80vw;
+    padding : 10px;
+}
+
+.projectsTableLeftDiv{
+    border: outset 4px rgb(219, 219, 219);
+    padding : 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projectsInnerGridRight{
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-between;
+
+}
+
+.largePadding{
+    padding-bottom: 40px;
+}
+
+.projectsTableRightDiv{
+    border : outset 4px rgb(219, 219, 219);
+    padding : 10px;
+    padding-top : 20px;
+    padding-left: 20px;
+
+}
+.devTools{
+    font-size: large;
+}
+
+.projectsTableRightInnerDiv{
+    opacity: 1;
+    transition: opacity 0.3s;
+
+}
+
+.projectsTableRightInnerDiv > .description{
+    width: 100%;
+    font-size: large;
+    
+}
+
+
+.projectTitle{
+    font-size: large;
+    border-bottom : solid 1px rgb(226, 226, 226);
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 0px #fff;
+    color : #000;
+    transition : box-shadow 0.2s, background-color 0.2s,color 0.2s;
+}
+
+.projectTitle:hover{
+    box-shadow : 2px 2px 2px 2px rgb(226, 226, 226);
+    background-color: rgba(16, 12, 66, 1);
+    color : #fff;
+}
+
+.projectSelected{
+    background-color: rgba(16, 12, 66, 1);
+    color : #fff;
+}
+
+.projectsInnerGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-top : 25px;
+}
+
+@media screen and (max-width:1250px) {
+    .projectsTableDiv{
+        display: none;
+    }
+}

@@ -1,0 +1,34 @@
+.expandedProjectDiv{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.expandedProjectDiv > h3{
+    text-align: center;
+}
+
+
+.projectsTitle{
+    border : solid 2px red;
+    transition: all 2s;
+}
+
+.expandedTile{
+    border : solid 2px blue;
+    
+}
+
+
+
+.projectTileSmall{
+    background-color: rgb(22,24,23);
+    color : #fff;
+}
+
+
+@media screen and (min-width:1251px) {
+    .displaySmall{
+        display: none;
+    }
+}

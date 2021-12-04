@@ -16,6 +16,7 @@ function ExperiencePage(props){
     return <div id={props.id} class="ExpDiv">
         <center>
             <h1>Experience</h1>
+            <div style={{width:"80%"}} className="HorizontalLineBlack displaySmall"/>
         </center>
     <div  class="ExpGrid">
         
