@@ -2,6 +2,10 @@
     display: grid;
     justify-content: center;
     justify-items: center;
+    transition: all 0.8s;
+    overflow: hidden;
+    padding : 2px 25px;
+    padding-top: 10px;
 }
 
 .expandedProjectDiv > h3{
@@ -10,25 +14,75 @@
 
 
 .projectsTitle{
-    border : solid 2px red;
-    transition: all 2s;
+    transition: all 0.8s;   
+    font-size: 16px;
+}
+
+.projectULSmall{
+    list-style-type: none;
+}
+
+.projectDetailsGridSmall{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+}
+
+.projectDescriptionSmall{
+    padding : 10px 0px;
+    font-size: 16px;
+}
+
+
+.projectsMainDivSmall{
+    margin-top: 20px;
+    display: grid;
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
 }
 
 .expandedTile{
-    border : solid 2px blue;
-    
+    padding : 0px;
+    margin : 10px;
 }
 
-
+.projectHeadingTitleSmall{
+    justify-self: center;
+    transition: all 0.1s linear;
+}
 
 .projectTileSmall{
-    background-color: rgb(22,24,23);
+    display: grid;
+    grid-template-columns: 95% 5%;
+    align-items: center;
+    background-color: rgba(16, 12, 66, 1);
+    text-align: left;
     color : #fff;
+    min-height: 55px;
+    border-radius: 2px;
+    padding: 10px;
+    margin : 0px 10px;
+    transition: all 0.8s;
+    min-width: 130px;   
+    align-self: end;
+    float: inline-end;
+    justify-self: end;
 }
 
 
-@media screen and (min-width:1251px) {
+.mobileTileActivated{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+
+
+@media screen and (min-width:1023px) {
     .displaySmall{
+        display: none;
+    }
+    .projectsMainDivSmall{
         display: none;
     }
 }

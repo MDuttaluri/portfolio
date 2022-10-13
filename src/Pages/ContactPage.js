@@ -5,6 +5,7 @@ import firebase from 'firebase';
 import Book from '../components/Book/Book';
 import Tiles from '../components/Tiles/Tiles';
 import ProjectsTable from '../components/ProjectsTable/ProjectsTable';
+import publicIp from 'public-ip';
 
 const firebaseConfig = {
     apiKey: "AIzaSyAwOSQKuHei4KGV9x0v3cv1yUGt00sevEM",
@@ -12,14 +13,28 @@ const firebaseConfig = {
     projectId: "dmt-portfolio",
     storageBucket: "dmt-portfolio.appspot.com",
     messagingSenderId: "479756051240",
-    appId: "1:479756051240:web:216cb153fd55395fcce61d"
+    appId: "1:479756051240:web:216cb153fd55395fcce61d",
+    measurementId: "G-YD3GJV9Z6E"
   };
   firebase.initializeApp(firebaseConfig);
   
   // Get a reference to the storage service, which is used to create references in your storage bucket
   var storage = firebase.storage();
+  const analytics = firebase.analytics();
+  
+  async function getIP(){
+      const userIP = await publicIp.v4();
+      return userIP;
+  }
 
-
+  async function logUserEntry(){
+    const userIP = await getIP();
+    let storageRef = storage.ref("/logs/"+userIP).child(moment().format()+".txt");
+    
+    try{
+        storageRef.putString("IP Address : "+userIP+"\n Timestamp : "+moment().format());
+    }catch(err){}
+  }
 
 function ContactPage(props){
     const[lockSubmit,setLockSubmit] = useState(false);
@@ -28,6 +43,7 @@ function ContactPage(props){
     const [message, setMessage] = useState("")
 
     useEffect(()=>{
+        logUserEntry();
         let x = localStorage.getItem("mailSent")
         if(x !== null){
             if(x === "yes"){

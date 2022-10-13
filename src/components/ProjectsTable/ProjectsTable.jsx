@@ -1,12 +1,13 @@
 import React, { Component, useEffect, useState } from 'react'
 import './ProjectsTableStyles.css';
 
-export let projectsData = {
+export let  projectsData = {
     0: {
         name: "E-commerce Site (Ongoing)",
         description: "MERN stack web application which replicates a full-on e-com website.",
-        tools: ["React.js", "Node.js", "Express.js", "MongoDB"],
+        tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase"],
         liveUrl: "https://shop-ee.web.app",
+        'URLlabel' : 'Shop-ee',
         duration : {
             length : "1 Month +",
             timeFrame : "September 2021 - Present"
@@ -16,6 +17,7 @@ export let projectsData = {
         name: "Sudoku Solver",
         description: "A simple interactive web application to solve a classic 9x9 sudoku puzzle using the backtracking approach.",
         liveUrl: "https://solve-sudoku.web.app",
+        'URLlabel' : 'Solve Sudoku',
         tools: ["HTML/CSS", "React.js", "Backtracking"],
         duration : {
             length : "5 Days",
@@ -26,6 +28,7 @@ export let projectsData = {
         name: "NPM - Typing Text - React Component Library",
         description: "A component library for React.js that enables 'typing' animation for the provided data with developer preferred customisation.",
         liveUrl: "https://www.npmjs.com/package/typingtext",
+        'URLlabel' : 'TypeTexting',
         tools: ["HTML/CSS", "React.js", "Rollup"],
         duration : {
             length : "1 Week",
@@ -36,6 +39,7 @@ export let projectsData = {
         name: "HTML Editor",
         description: "A Web application that enables users to write and check their HTML, CSS and JavaScript code in their browser. Additional features like 'Hot-render' and code downloading is also included.",
         liveUrl: "https://htmleditor.web.app",
+        'URLlabel' : 'Online Editor',
         tools: ["HTML/CSS", "Ace editor", "React.js"],
         duration : {
             length : "1 Day",

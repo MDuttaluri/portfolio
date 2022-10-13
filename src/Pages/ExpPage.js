@@ -5,18 +5,19 @@ import moment from "moment";
 function ExperiencePage(props){
     function getExp(joiningDate){
         // yyyy-mm-dd
-        let x = parseFloat(moment().diff(moment(joiningDate),'months'))
-        if(x < 12){
-            return <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>{x}+</h1></p>
-        }
-        else{
-            return <p>Experience in years : <h1 style={{marginLeft:"4px",display:"inline"}}>{moment().diff(moment(joiningDate),'years',true).toFixed(1)}+</h1></p>
-        }
+        // let x = parseFloat(moment().diff(moment(joiningDate),'months'))
+        // if(x < 12){
+        //     return <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>{x}+</h1></p>
+        // }
+        // else{
+        //     return <p>Experience in years : <h1 style={{marginLeft:"4px",display:"inline"}}>{moment().diff(moment(joiningDate),'years',true).toFixed(1)}+</h1></p>
+        // }
+        return <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>16 Months</h1></p>
     }
     return <div id={props.id} class="ExpDiv">
         <center>
             <h1>Experience</h1>
-            <div style={{width:"80%"}} className="HorizontalLineBlack displaySmall"/>
+            <div style={{width:"20%"}} className="HorizontalLineBlack "/>
         </center>
     <div  class="ExpGrid">
         
@@ -25,7 +26,7 @@ function ExperiencePage(props){
                 <center>
                     <h1>Work</h1>
                     <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
-                    <p>Assistant Systems Engineer,</p><p> Tata Consultancy Services</p>
+                    <p>AEM/CQ Developer - Assistant Systems Engineer,</p><p> Tata Consultancy Services</p>
                     {getExp("2021-01-27")}
                  
                 </center>
@@ -62,12 +63,12 @@ function ExperiencePage(props){
                         <div >
                                 <SkillBar name="Python" value="90"/>
                                 <SkillBar name="SQL" value="70"/>
-                                <SkillBar name="AEM/CQ" value="60"/>
+                                <SkillBar name="AEM/CQ" value="70"/>
                         </div>
                         <div >
                                 <SkillBar name="HTML/CSS" value="80"/>
                                 <SkillBar name="React.js" value="80"/>
-                                <SkillBar name="Mongo DB" value="60"/>
+                                <SkillBar name="Mongo DB" value="70"/>
                     
                         </div>
                     </div>

@@ -3,10 +3,11 @@ import {FiArrowDown} from 'react-icons/fi';
 function IntroPage({id}) {
     const [counter, setCounter] = useState(0)
     const [items, setItems] = useState([])
-    const [data, setData] = useState(["Hello!","I am,","Manyu Duttaluri","And I'm a,"])
+    const [data, setData] = useState(["Hello!","This is,","Manyu Duttaluri","And I'm a,"])
     const [intervals, setIntervals] = useState([800,1000,1800,1300,2100])
-    const [titles, setTitles] = useState(["Student.","CS Undergrad.","Employee.","Full Stack Developer."])
+    const [titles, setTitles] = useState(["Student.","CS Undergrad.","Ex - Employee","Full Stack Developer."])
     const [navButtonOpacity, setNavButtonOpacity] = useState("0")
+    const highlightIdx = 2;
 
     function getPromise(interval){
         return new Promise(resolve => setTimeout(resolve,interval))
@@ -63,7 +64,7 @@ function IntroPage({id}) {
         //alert(bound)
 
         for(let i =0;i<=bound;i++){
-            items.push(<div className="introDiv__item"><p style={{animation:count>i?"none":`animText ${intervals[i]}ms steps(40, end) forwards,animText__cursor 0.8s infinite`}} className={count>i?"animText noAnim":"animText"}>{data[i]}</p></div>)
+            items.push(<div className="introDiv__item"><p style={{animation:count>i?"none":`animText ${intervals[i]}ms steps(40, end) forwards,animText__cursor 0.8s infinite`, fontWeight:i == highlightIdx? 'bolder':'normal'}} className={count>i?"animText noAnim":"animText"}>{data[i]}</p></div>)
         }
         // console.log(count);
         let i = count - data.length;

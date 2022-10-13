@@ -1,7 +1,7 @@
 html{
   scroll-behavior: smooth;
-  
 }
+
 
 #logo:hover{
   color: white;
@@ -126,6 +126,7 @@ html{
 .projectsHeaderMain{
   text-align: center;
   height: min-content;
+  margin-top: 15px;
 }
 
 .ContactDiv{
@@ -553,7 +554,6 @@ input:focus{
 
 
 .Dashboard{
-  background-image: url("asset/monitor.png");
   background-position: 0%;
   background-repeat: no-repeat ;
   background-position: center;
