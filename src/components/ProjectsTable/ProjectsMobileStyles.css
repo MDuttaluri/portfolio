@@ -1,10 +1,15 @@
 .expandedProjectDiv{
     display: grid;
     justify-content: center;
+    /* max-width: fit-content; */
     justify-items: center;
     transition: all 0.8s;
+    transition-duration:0.8s;
+-webkit-transition-duration:0.8s;
+-ms-transition-duration:0.8s;
+-moz-transition-duration:0.8s;
     overflow: hidden;
-    padding : 2px 25px;
+    padding : 2px 20px;
     padding-top: 10px;
 }
 
@@ -15,6 +20,10 @@
 
 .projectsTitle{
     transition: all 0.8s;   
+    transition-duration:0.8s;
+-webkit-transition-duration:0.8s;
+-ms-transition-duration:0.8s;
+-moz-transition-duration:0.8s;
     font-size: 16px;
 }
 
@@ -24,8 +33,9 @@
 
 .projectDetailsGridSmall{
     display: grid;
-    width: 100%;
-    grid-template-columns: 60% 40%;
+    min-width: 85vw;
+    grid-template-columns:60% 40%;
+    justify-items: start;
 }
 
 .projectDescriptionSmall{
@@ -37,9 +47,10 @@
 .projectsMainDivSmall{
     margin-top: 20px;
     display: grid;
-    flex-direction: column;
     gap: 10px;
     width: 100vw;
+    align-items: baseline;
+    grid-template-columns: auto;
 }
 
 .expandedTile{
@@ -49,7 +60,11 @@
 
 .projectHeadingTitleSmall{
     justify-self: center;
-    transition: all 0.1s linear;
+    transition: all 0.8s linear;
+    transition-duration:0.1s;
+-webkit-transition-duration:0.1s;
+-ms-transition-duration:0.1s;
+-moz-transition-duration:0.1s;
 }
 
 .projectTileSmall{
@@ -64,10 +79,13 @@
     padding: 10px;
     margin : 0px 10px;
     transition: all 0.8s;
-    min-width: 130px;   
-    align-self: end;
-    float: inline-end;
-    justify-self: end;
+    transition-duration:0.8s;
+-webkit-transition-duration:0.8s;
+-ms-transition-duration:0.8s;
+-moz-transition-duration:0.8s;
+    min-width: 90vw;   
+    float: inline-start;
+    justify-self: center;
 }
 
 

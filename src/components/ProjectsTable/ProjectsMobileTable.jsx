@@ -28,7 +28,7 @@ export function ProjectsMobileTable() {
               <p
                 className="projectHeadingTitleSmall"
                 style={{
-                  transition: "all 0.8s",
+                  // transition: "all 0.8s",
                  
                   ...(key == currentlyOpen
                     ? { fontSize: "1.3rem", width: "fit-content" }
