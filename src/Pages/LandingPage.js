@@ -6,7 +6,7 @@ import IntroPage from './IntroPage';
 function LandingPage(props){
 
     useEffect(()=>{
-        fetch('https://dmt-portfolio-monitor.herokuapp.com/')
+        //fetch('https://portfolio-mailer.azurewebsites.net/')
     },[])
 
     const id = props.id

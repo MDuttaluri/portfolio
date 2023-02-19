@@ -107,7 +107,7 @@ function ContactPage(props){
                 <div style={{width:"50%"}} class="HorizontalLineBlack"></div>
                 <p>Resume link : <a className="hoverText" href={resume} target="blank">View</a>&ensp;<a className="hoverText" href={resume} download>Download</a></p>
                 <p>LinkedIn Profile : <a className="hoverText" target="blank" href="https://www.linkedin.com/in/manyu-duttaluri">Manyu Duttaluri</a></p>
-                <p>Page developed using React.js </p>
+                <p>Page developed using React.js and hosted on Firebase. </p>
            </div>
         
         </center>

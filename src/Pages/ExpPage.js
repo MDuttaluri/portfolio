@@ -12,14 +12,14 @@ function ExperiencePage(props){
         // else{
         //     return <p>Experience in years : <h1 style={{marginLeft:"4px",display:"inline"}}>{moment().diff(moment(joiningDate),'years',true).toFixed(1)}+</h1></p>
         // }
-        return <p>Experience in months : <h1 style={{marginLeft:"4px",display:"inline"}}>16 Months</h1></p>
+        return <p>Experience in months : <h2 style={{marginLeft:"4px",display:"inline"}}>16 Months</h2></p>
     }
     return <div id={props.id} class="ExpDiv">
         <center>
             <h1>Experience</h1>
             <div style={{width:"20%"}} className="HorizontalLineBlack "/>
         </center>
-    <div  class="ExpGrid">
+    <div  class="ExpGrid" style={{gridTemplateColumns: "33% 33% 33%"}}>
         
         <center>
             <div class="ExpItem">
@@ -32,6 +32,19 @@ function ExperiencePage(props){
                 </center>
             </div>
         </center>
+
+        <center>
+            <div class="ExpItem">
+                <center>
+                    <h1>Ongoing</h1>
+                    <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
+                    <p>Masters in <b>Computer Science</b></p>
+                    <p>George Mason University</p>
+                    <p>Period : Jan 23 to 2024</p>
+                </center>
+            </div>
+        </center>
+
 
         <center>
             <div class="ExpItem">
