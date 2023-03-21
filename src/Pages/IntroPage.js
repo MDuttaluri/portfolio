@@ -5,7 +5,7 @@ function IntroPage({id}) {
     const [items, setItems] = useState([])
     const [data, setData] = useState(["Hello!","This is,","Manyu Duttaluri","And I'm a,"])
     const [intervals, setIntervals] = useState([800,1000,1800,1300,2100])
-    const [titles, setTitles] = useState(["Student.","CS Undergrad.","Ex - Employee","Full Stack Developer."])
+    const [titles, setTitles] = useState(["","Ex-MNC Employee","Full Stack Developer", "CS Student."])
     const [navButtonOpacity, setNavButtonOpacity] = useState("0")
     const highlightIdx = 2;
 
@@ -50,6 +50,7 @@ function IntroPage({id}) {
     useEffect(async()=>{
         await loaded()
         loadNavButton()
+        
     },[])
 
     useEffect(()=>{

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import smoothscroll from 'smoothscroll-polyfill';
-var classNames = require('classnames');
 
 smoothscroll.polyfill();
 
@@ -30,12 +29,12 @@ function Header(){
 
     }
 
-    return <div id="Header" class="Header">
-            <div class="HeaderLeftDiv">
+    return <div id="Header" className="Header">
+            <div className="HeaderLeftDiv">
                 <h1 id="logo" onClick={logoClicked} style={{userSelect:"none",fontSize:"2rem",display:"inline",fontFamily:"system-ui",textShadow:logoClicked?"2px 2px 2px blue":"2px 2px 2px red"}}>DMT</h1>
             </div>
-            <div class="HeaderRightSmallerDeviceDiv">
-                <button class="HeaderButton" onClick={()=>{
+            <div className="HeaderRightSmallerDeviceDiv">
+                <button className="HeaderButton" onClick={()=>{
                     if(animationInTransit == true)
                         return;
                     
@@ -55,11 +54,11 @@ function Header(){
                     }
                     //setTimeout(()=>{setHamClicked(!hamClicked);},1000);
                 }}><h3 style={{fontSize:"2.5rem",position:"relative",top:"0",right:"0"}}>☰</h3></button>            
-                <div id="smallNavBar" class="HeaderSmallerDivButtons" hidden={hamClicked}>
+                <div id="smallNavBar" className="HeaderSmallerDivButtons" hidden={hamClicked}>
                     <HeaderButtonsList newLines={true} parentContext={{setter:setHamClicked}}/>
                 </div>
             </div>
-            <div class="HeaderRightLargerDeviceDiv">
+            <div className="HeaderRightLargerDeviceDiv">
                 <HeaderButtonsList/>
             </div>
 
@@ -71,7 +70,6 @@ function Header(){
 function HeaderButtonsList(props){
 
     const [buttonLabels,setButtonLabels] = useState(['Intro','Projects','Experience','Contact']);
-    const [buttonLinks,setButtonLinks] = useState(['#Intro','#Projects','#Experience','#Contact']);
     const [includeBr,setIncludeBr] = useState(props.newLines);
     const parentFn = props.parentContext;
     var regions = {};
@@ -171,11 +169,11 @@ function HeaderButtonsList(props){
     }
   
     return <>
-    {includeBr?<div class="HorizontalLine"></div>:<></>}
+    {includeBr?<div className="HorizontalLine"></div>:<></>}
         {buttonLabels.map((item,idx)=>{
             return <>
-            {includeBr?<div class="HorizontalSpace"></div>:<></>}
-            <button class="HeaderButton" onClick={clicked}><p id={(includeBr==true?"Small":"Big")+"HeaderButton"+buttonLabels[idx]}>{item}</p></button> {includeBr?<br/>:<></>}
+            {includeBr?<div className="HorizontalSpace"></div>:<></>}
+            <button className="HeaderButton" onClick={clicked}><p id={(includeBr==true?"Small":"Big")+"HeaderButton"+buttonLabels[idx]}>{item}</p></button> {includeBr?<br/>:<></>}
             </>;
         })}
     </>;

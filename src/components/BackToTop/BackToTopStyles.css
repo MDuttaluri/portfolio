@@ -1,0 +1,25 @@
+.BackToTop{
+    position: fixed;
+    right : 5%;
+    bottom : 5%;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.BackToTop > img{
+    height : 25px;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 1px #c4c4c4;
+    z-index: 1000;
+    transition: all 0.2s;
+    mix-blend-mode: difference;
+    background-color: #fff;
+   
+}
+
+.BackToTop > img:hover{
+    scale:1.2;  
+    box-shadow: 2px 2px 2px 1px #c4c4c4;
+  
+}

@@ -1,7 +1,5 @@
-import { Carousel } from "react-bootstrap";
 import ProjectsMobileTable from "../components/ProjectsTable/ProjectsMobileTable";
 import ProjectsTable from "../components/ProjectsTable/ProjectsTable";
-import {AiFillCaretRight, AiFillCaretLeft} from 'react-icons/ai'
 
 function ProjectsPage(props) {
 
@@ -15,6 +13,7 @@ function ProjectsPage(props) {
         <div className="displaySmall">
             
         </div>
+        
     </div>
     
 }

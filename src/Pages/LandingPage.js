@@ -3,22 +3,26 @@ import ContactPage from "./ContactPage";
 import ExperiencePage from "./ExpPage";
 import ProjectsPage from "./ProjectsPage";
 import IntroPage from './IntroPage';
+import BackToTop from "../components/BackToTop/BackToTop";
 function LandingPage(props){
 
     useEffect(()=>{
-        //fetch('https://portfolio-mailer.azurewebsites.net/')
+       // fetch('https://portfolio-mailer.azurewebsites.net/')
     },[])
 
     const id = props.id
-    return <div  id={id} class="LandingPageDiv">
+    return <div>
+        <div  id={id} class="LandingPageDiv">
             <IntroPage id={"Intro"}/>
             <ProjectsPage id="Projects"/>
             <ExperiencePage id="Experience"/>
            
             <ContactPage id="Contact"/>
-
            
     </div>
+                    <BackToTop/>
+
+        </div>
 }
 
 

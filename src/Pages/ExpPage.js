@@ -40,7 +40,7 @@ function ExperiencePage(props){
                     <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
                     <p>Masters in <b>Computer Science</b></p>
                     <p>George Mason University</p>
-                    <p>Period : Jan 23 to 2024</p>
+                    <p>Period : Jan 23 to May 2024</p>
                 </center>
             </div>
         </center>
@@ -49,9 +49,9 @@ function ExperiencePage(props){
         <center>
             <div class="ExpItem">
                 <center>
-                    <h1>Alma Mater</h1>
+                    <h1>Bachelors</h1>
                     <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
-                    <p>Bachelors in <b>Computer Science And Engineering</b></p>
+                    <p>In <b>Computer Science And Engineering</b></p>
                     <p>R.V.R. & J.C.C.E.</p>
                     <p>Period : 2016-2020</p>
                 </center>

@@ -2,9 +2,6 @@ import moment from 'moment';
 import { useEffect, useState } from 'react';
 import resume from '../asset/Resume-Manyu Duttauri.pdf';
 import firebase from 'firebase';
-import Book from '../components/Book/Book';
-import Tiles from '../components/Tiles/Tiles';
-import ProjectsTable from '../components/ProjectsTable/ProjectsTable';
 import publicIp from 'public-ip';
 
 const firebaseConfig = {
