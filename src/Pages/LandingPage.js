@@ -7,7 +7,7 @@ import BackToTop from "../components/BackToTop/BackToTop";
 function LandingPage(props){
 
     useEffect(()=>{
-       // fetch('https://portfolio-mailer.azurewebsites.net/')
+        fetch('https://portfolio-mailer.azurewebsites.net/')
     },[])
 
     const id = props.id
