@@ -445,8 +445,14 @@ input:focus{
   
 }
 
-
 @media screen and (max-width: 850px) {
+  .GridClass{
+    display: inline;
+  }
+  
+}
+
+@media screen and (max-width: 550px) {
   .grid--threeCol{
     margin:15px;
     display: grid;
@@ -466,9 +472,7 @@ input:focus{
   .SkillBarDiv{
     max-width: 80%;
   }
-  .GridClass{
-    display: inline;
-  }
+  
   .ExpItemWide{
     padding:1%;
     margin: 15px;
@@ -530,7 +534,7 @@ input:focus{
 }
 
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 550px) {
     .HeaderRightSmallerDeviceDiv{
         display:none;
     }

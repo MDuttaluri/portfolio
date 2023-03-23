@@ -14,18 +14,18 @@ function ExperiencePage(props){
         // }
         return <p>Experience in months : <h2 style={{marginLeft:"4px",display:"inline"}}>16 Months</h2></p>
     }
-    return <div id={props.id} class="ExpDiv">
+    return <div id={props.id} className="ExpDiv">
         <center>
             <h1>Experience</h1>
             <div style={{width:"20%"}} className="HorizontalLineBlack "/>
         </center>
-    <div  class="ExpGrid" style={{gridTemplateColumns: "33% 33% 33%"}}>
+    <div  className="ExpGrid" style={{gridTemplateColumns: "33% 33% 33%"}}>
         
         <center>
-            <div class="ExpItem">
+            <div className="ExpItem">
                 <center>
                     <h1>Work</h1>
-                    <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
+                    <div style={{width:"20vw"}} className="HorizontalLineBlack"></div>
                     <p>AEM/CQ Developer - Assistant Systems Engineer,</p><p> Tata Consultancy Services</p>
                     {getExp("2021-01-27")}
                  
@@ -34,10 +34,10 @@ function ExperiencePage(props){
         </center>
 
         <center>
-            <div class="ExpItem">
+            <div className="ExpItem">
                 <center>
                     <h1>Ongoing</h1>
-                    <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
+                    <div style={{width:"20vw"}} className="HorizontalLineBlack"></div>
                     <p>Masters in <b>Computer Science</b></p>
                     <p>George Mason University</p>
                     <p>Period : Jan 23 to May 2024</p>
@@ -47,10 +47,10 @@ function ExperiencePage(props){
 
 
         <center>
-            <div class="ExpItem">
+            <div className="ExpItem">
                 <center>
                     <h1>Bachelors</h1>
-                    <div style={{width:"20vw"}} class="HorizontalLineBlack"></div>
+                    <div style={{width:"20vw"}} className="HorizontalLineBlack"></div>
                     <p>In <b>Computer Science And Engineering</b></p>
                     <p>R.V.R. & J.C.C.E.</p>
                     <p>Period : 2016-2020</p>
@@ -62,12 +62,12 @@ function ExperiencePage(props){
       
     </div>
     
-            <div class="ExpItemWide" style={{width:"100%"}}>
+            <div className="ExpItemWide" style={{width:"100%"}}>
                 <center>
                     <h1>Programming Knowledge</h1>
                     <div style={{width:"50%"}} class="HorizontalLineBlack"></div>
                     <center>
-                    <div class="GridClass">
+                    <div className="GridClass">
                         <div >
                                 <SkillBar name="Java" value="90"/>
                                 <SkillBar name="JavaScript" value="80"/>
@@ -108,10 +108,10 @@ function SkillBar(props){
 
     return <div style={{position:"grid",gridTemplateColumns:"auto auto"}} onMouseEnter={skillHovered} onMouseLeave={skillHoverLeft}>
     
-     <div class="SkillBarDiv">
+     <div className="SkillBarDiv">
                 <p >{name}</p>
-                <div class="SkillBar" ref={target} >
-                    <div style={{left:(val-20)+"%"}} class="SkillButton"></div>
+                <div className="SkillBar" ref={target} >
+                    <div style={{left:(val-20)+"%"}} className="SkillButton"></div>
                 </div>
                 <Overlay target={target.current} show={showHover} placement="top">
         {({ placement, arrowProps, show: _showHover, popper, ...props }) => (

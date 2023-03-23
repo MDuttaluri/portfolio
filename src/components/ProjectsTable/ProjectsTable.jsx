@@ -70,8 +70,8 @@ export let  projectsData = {
 }
 
 function truncateLink(st){
-    if(st.length > 30){
-        return st.substr(0,30) + "..."
+    if(st.length > 35){
+        return st.substr(0,35) + "..."
     }
     return st
 }
@@ -127,7 +127,7 @@ export function ProjectsTable(props) {
                                     {currentProject!=4? <h2>Live URL </h2>:<h2>Paper available at</h2>}
                                     <div style={{ width: "50%" }} class="HorizontalLineBlack"></div>
 
-                                    <h3><a target="blank" href={projectsData[currentProject].liveUrl}>{truncateLink(projectsData[currentProject].liveUrl)}</a></h3>
+                                    <h5><a target="blank" href={projectsData[currentProject].liveUrl}>{truncateLink(projectsData[currentProject].liveUrl)}</a></h5>
                                 </div>
                             }
                             {

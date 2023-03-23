@@ -39,6 +39,10 @@ function ContactPage(props){
     const [subject, setSubject] = useState("")
     const [message, setMessage] = useState("")
 
+    useEffect(async ()=>{
+        fetch('https://portfolio-mailer.azurewebsites.net/?reqip=' + await getIP())
+    },[])
+
     useEffect(()=>{
         logUserEntry();
         let x = localStorage.getItem("mailSent")

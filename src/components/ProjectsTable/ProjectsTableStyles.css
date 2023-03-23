@@ -22,8 +22,16 @@
 
 }
 
+.projLink{
+    width: 30px;
+    font-size: 0.85em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .largePadding{
-    padding-bottom: 40px;
+    padding-bottom: 40px;   
 }
 
 .projectsTableRightDiv{
